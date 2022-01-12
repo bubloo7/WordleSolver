@@ -8,7 +8,7 @@ An algorithm that can solve the word puzzle [Wordle](https://www.powerlanguage.c
 
 Copy this project with `git clone` and run `python3 solver.py` in the terminal.
 
-When you run the program, the algorithm will provide you with an educated guess. Then, you type the guess into Wordl. Once you get the result of how many letters were right, you input it back into the program and will get another guess back. This process will continue until you have solved the puzzle!
+When you run the program, the algorithm will provide you with an educated guess. Then, you type the guess into Wordle. Once you get the result of how many letters were right, you input it back into the program and will get another guess back. This process will continue until you have solved the puzzle!
 
 Inputting the result of your guesses is easy. If a character is gray, enter '\_', if a character is yellow, enter the lowercase letter, and if a character is green, enter the uppercase letter. For example, if the program told you to guess "aeros" and the result of the guess was:
 

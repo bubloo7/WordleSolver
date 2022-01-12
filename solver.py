@@ -16,11 +16,6 @@ while(len(wordList) > 1):
     val, guess, f = wordList[0]
     print("narrowed down to: " + str(len(wordList)) + " words")
     input("guess: " + guess)
-    freqs = {}
-    for c in guess:
-        if c not in freqs:
-            freqs[c] = 0
-        freqs[c] += 1
     s = input("What was the result?\n")
     for i in range(len(s)):
         c = s[i]
@@ -41,15 +36,13 @@ while(len(wordList) > 1):
                 else:
                     break
             no.append(charDict[c]['yellow']**count)
-        
+
         elif c.islower():
             num *= charDict[c]['yellow']
-            no.append(charDict[c]['green'][i])
 
-    # print(num)
-    # print(no)
+            no.append(charDict[c]['green'][i])
     for i in range(len(wordList)-1, -1, -1):
-        val, guess,freq  = wordList[i]
+        val, guess, freq = wordList[i]
         if val % num != 0:
             wordList.pop(i)
             continue
@@ -57,9 +50,9 @@ while(len(wordList) > 1):
             if val % n == 0:
                 wordList.pop(i)
                 break
-    
+
     if (len(wordList) < 100):
-            wordList.sort(key = lambda x: x[2], reverse = True) 
+        wordList.sort(key=lambda x: x[2], reverse=True)
 
 
 print("answer is " + wordList[0][1])
