@@ -40,6 +40,8 @@ Another optimization I made is taking into account how common a word is. There a
 
 As I mentioned before, one of the optimizations I made was having more common letters correspond with smaller prime numbers and sorting the list of words based on the number associated with each word. This is all done just once for each set of words in `process.py` and is very computationally efficient. However, if more accuracy is desired, the prime number associated with each letter can be re-generated after each guess because the frequency of each letter is likely to change. This may increase accuracy slightly but will take much longer to process which is why I opted against it. After each guess, I would have to re-check the frequency of each letter, calculate the value of each word, and then resort to the entire list based on this new value.
 
+Another potential optimization is assigning the prime values based on the frequency of a letter in a specefic position, not just in any position. If e appears in position 1 more often than position 2, for example, the e's first yellow number would be smaller than e's second yellow number. The advantage of assigning prime numbers this way is it makes guesses more likely to be green, rather than yellow by a slight amount. This optimization would likely not make a major difference so it was skipped.
+
 ## Sources
 
 - [Wordle](https://www.powerlanguage.co.uk/wordle/) is by [PowerLanguage](https://www.powerlanguage.co.uk/wordle/)
