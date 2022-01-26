@@ -4,8 +4,6 @@ An algorithm that can solve the word puzzle [Wordle](https://www.powerlanguage.c
 
 ## How to use the program
 
----
-
 Copy this project with `git clone` and run `python3 solver.py` in the terminal.
 
 When you run the program, the algorithm will provide you with an educated guess. Then, you type the guess into Wordle. Once you get the result of how many letters were right, you input it back into the program and will get another guess back. This process will continue until you have solved the puzzle!
